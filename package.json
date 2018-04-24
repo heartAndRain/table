@@ -1,6 +1,6 @@
 {
-  "name": "rc-table",
-  "version": "6.1.7",
+  "name": "@mtfe/rc-table",
+  "version": "6.1.7-alpha2",
   "description": "table ui component for react",
   "keywords": [
     "react",
@@ -19,15 +19,11 @@
   "module": "./es/index",
   "homepage": "http://github.com/react-component/table",
   "maintainers": [
-    "yiminghe@gmail.com",
-    "afc163@gmail.com"
+    "lixnyu1994123@gmail.com"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-component/table.git"
-  },
-  "bugs": {
-    "url": "http://github.com/react-component/table/issues"
+    "url": "git@github.com:heartAndRain/table"
   },
   "licenses": "MIT",
   "config": {
