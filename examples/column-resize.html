@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>column-resize.js - example - rc-table@6.1.10</title>
+  <title>column-resize.js - example - @mtfe/rc-table@6.1.7-alpha3</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -257,13 +257,13 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
   }
   </script>
-  <link rel="stylesheet" href="../common.css" /><link rel="stylesheet" href="column-resize.css" />
+  
 </head>
 
 <body>
   <div class="container">
     <div class="header">
-      <h1>rc-table@6.1.10</h1>
+      <h1>@mtfe/rc-table@6.1.7-alpha3</h1>
 
       <p>table ui component for react</p>
     </div>
@@ -274,11 +274,11 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
 <span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
 <span class="hljs-keyword">import</span> Table <span class="hljs-keyword">from</span> <span class="hljs-string">'rc-table'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rc-table/assets/index.css'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rc-table/assets/index.less'</span>;
 <span class="hljs-keyword">import</span> { Resizable } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-resizable'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'react-resizable/css/styles.css'</span>;
 
-<span class="hljs-keyword">const</span> ResizeableTitle = props =&gt; {
+<span class="hljs-keyword">const</span> ResizeableTitle = (props) =&gt; {
   <span class="hljs-keyword">const</span> { onResize, width, ...restProps } = props;
 
   <span class="hljs-keyword">if</span> (!width) {
@@ -304,27 +304,24 @@ ResizeableTitle.propTypes = {
       { id: <span class="hljs-string">'123'</span>, title: <span class="hljs-string">'title2'</span>, dataIndex: <span class="hljs-string">'b'</span>, key: <span class="hljs-string">'b'</span>, width: <span class="hljs-number">100</span> },
       { title: <span class="hljs-string">'title3'</span>, dataIndex: <span class="hljs-string">'c'</span>, key: <span class="hljs-string">'c'</span>, width: <span class="hljs-number">200</span> },
       {
-        title: <span class="hljs-string">'Operations'</span>,
-        dataIndex: <span class="hljs-string">''</span>,
-        key: <span class="hljs-string">'d'</span>,
-        render() {
+        title: <span class="hljs-string">'Operations'</span>, dataIndex: <span class="hljs-string">''</span>, key: <span class="hljs-string">'d'</span>, render() {
           <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Operations<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>;</span>
         },
       },
     ],
-  };
+  }
 
   components = {
     header: {
       cell: ResizeableTitle,
     },
-  };
+  }
 
   data = [
     { a: <span class="hljs-string">'123'</span>, key: <span class="hljs-string">'1'</span> },
     { a: <span class="hljs-string">'cdd'</span>, b: <span class="hljs-string">'edd'</span>, key: <span class="hljs-string">'2'</span> },
     { a: <span class="hljs-string">'1333'</span>, c: <span class="hljs-string">'eee'</span>, d: <span class="hljs-number">2</span>, key: <span class="hljs-string">'3'</span> },
-  ];
+  ]
 
   handleResize = index =&gt; (e, { size }) =&gt; {
     <span class="hljs-keyword">this</span>.setState(({ columns }) =&gt; {
@@ -335,12 +332,12 @@ ResizeableTitle.propTypes = {
       };
       <span class="hljs-keyword">return</span> { columns: nextColumns };
     });
-  };
+  }
 
   render() {
     <span class="hljs-keyword">const</span> columns = <span class="hljs-keyword">this</span>.state.columns.map((col, index) =&gt; ({
       ...col,
-      onHeaderCell: column =&gt; ({
+      onHeaderCell: (column) =&gt; ({
         width: column.width,
         onResize: <span class="hljs-keyword">this</span>.handleResize(index),
       }),

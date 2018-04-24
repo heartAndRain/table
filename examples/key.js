@@ -1,33 +1,26 @@
-webpackJsonp([15],{
+webpackJsonp([11],{
 
-/***/ 382:
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(383);
+module.exports = __webpack_require__(33);
 
 
 /***/ }),
 
-/***/ 383:
+/***/ 33:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_classCallCheck__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rc_table__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rc_table_assets_index_less__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rc_table_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rc_table_assets_index_less__);
+throw new Error("Cannot find module \"babel-runtime/helpers/classCallCheck\"");
+throw new Error("Cannot find module \"babel-runtime/helpers/possibleConstructorReturn\"");
+throw new Error("Cannot find module \"babel-runtime/helpers/inherits\"");
+throw new Error("Cannot find module \"react\"");
+throw new Error("Cannot find module \"react-dom\"");
+throw new Error("Cannot find module \"prop-types\"");
+throw new Error("Cannot find module \"rc-table\"");
+throw new Error("Cannot find module \"rc-table/assets/index.less\"");
 
 
 
@@ -46,10 +39,6 @@ var CheckBox = function CheckBox(_ref) {
     __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement('input', { type: 'checkbox' }),
     id
   );
-};
-
-CheckBox.propTypes = {
-  id: __WEBPACK_IMPORTED_MODULE_5_prop_types___default.a.string
 };
 
 var Demo = function (_React$Component) {
@@ -88,12 +77,14 @@ var Demo = function (_React$Component) {
     });
   };
 
+  Demo.prototype.checkbox = function checkbox(a) {
+    return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(CheckBox, { id: a });
+  };
+
   Demo.prototype.render = function render() {
     var state = this.state;
-    var columns = [{ title: 'title1', dataIndex: 'a', key: 'a', width: 100, render: function render(a) {
-        return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(CheckBox, { id: a });
-      } }, { title: 'title2', dataIndex: 'b', key: 'b', width: 100 }, { title: 'title3', dataIndex: 'c', key: 'c', width: 200 }, { title: 'Operations', dataIndex: '', key: 'x', render: this.renderAction }];
-    return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_rc_table__["a" /* default */], { columns: columns, data: state.data, className: 'table', rowKey: function rowKey(record) {
+    var columns = [{ title: 'title1', dataIndex: 'a', key: 'a', width: 100, render: this.checkbox }, { title: 'title2', dataIndex: 'b', key: 'b', width: 100 }, { title: 'title3', dataIndex: 'c', key: 'c', width: 200 }, { title: 'Operations', dataIndex: '', key: 'x', render: this.renderAction }];
+    return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_rc_table___default.a, { columns: columns, data: state.data, className: 'table', rowKey: function rowKey(record) {
         return record.a;
       } });
   };
@@ -121,5 +112,5 @@ __WEBPACK_IMPORTED_MODULE_4_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 /***/ })
 
-},[382]);
+},[32]);
 //# sourceMappingURL=key.js.map
